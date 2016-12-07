@@ -12,6 +12,7 @@ var counterSpan = document.createElement('span');
 counter.classList.add('counter');
 counterSpan.textContent = 0;
 counter.appendChild(counterSpan);
+divMain.appendChild(counter);
 
 // create the Button
 var button = document.createElement('button'); //create button
@@ -22,6 +23,9 @@ divMain.appendChild(button);
 var noteContainer = document.createElement('div');
 noteContainer.classList.add('note-container');
 body.appendChild(noteContainer);
+divMain.appendChild(button);
+
+
 
 // creates New Notes on 'click'
 var handleButton = function(event) { //button handler
@@ -36,10 +40,21 @@ var handleButton = function(event) { //button handler
   pTag.textContent = 'stuff'
   div.appendChild(span);
   div.appendChild(pTag);
+  pTag.setAttribute('contenteditable',true);
+  span.addEventListener('click', handleRemoveNote);
 }
 
-divMain.appendChild(counter);
-divMain.appendChild(button);
 // event listener for button clicked
 button.addEventListener('click', handleButton);
+
+// handle to remove the Note
+var handleRemoveNote = function(event) {
+console.log(event.target);
+  event.target.parentNode.remove();
+}
+
+
+
+
+
 
