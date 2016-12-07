@@ -10,11 +10,15 @@ button {
   color: white;
 }
 
+.note-container {
+
+}
 .note {
-  height:100px;
-  width: 100px;
+  height:300px;
+  width: 300px;
   background-color: yellow;
   margin: 5px;
+  float: left;
 }
 
 /*CSS styling goes here*/
