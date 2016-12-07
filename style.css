@@ -12,6 +12,8 @@ button {
 
 .note-container {
 
+
+
 }
 .note {
   height:300px;
@@ -21,4 +23,12 @@ button {
   float: left;
 }
 
+.remove {
+  margin: 10px;
+}
+
+.remove:hover {
+  font-size: 30px;
+  color: rgb(255,100,100);
+}
 /*CSS styling goes here*/

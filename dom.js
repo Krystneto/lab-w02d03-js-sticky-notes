@@ -10,7 +10,7 @@ var counter = document.createElement('div'); //create div "counter"
 var counterText = counter.textContent = "Total Number of Notes";
 var counterSpan = document.createElement('span');
 counter.classList.add('counter');
-counterSpan.textContent = 0;
+counterSpan.textContent = null;
 counter.appendChild(counterSpan);
 divMain.appendChild(counter);
 
@@ -37,11 +37,13 @@ var handleButton = function(event) { //button handler
   span.classList.add('remove')
   span.textContent = 'X';
   var pTag = document.createElement('p');
-  pTag.textContent = 'stuff'
+  pTag.textContent = '';
   div.appendChild(span);
   div.appendChild(pTag);
   pTag.setAttribute('contenteditable',true);
   span.addEventListener('click', handleRemoveNote);
+  var noteItems = document.querySelectorAll('.note');
+  counterSpan.textContent = " " + noteItems.length;
 }
 
 // event listener for button clicked
