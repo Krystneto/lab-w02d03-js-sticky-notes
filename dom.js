@@ -34,12 +34,13 @@ var handleButton = function(event) { //button handler
   var currentDate = new Date();
   var span = document.createElement('span');
   span.classList.add('remove')
-  span.textContent = 'X ' + currentDate;
+  span.textContent = 'X ' + currentDate
   var pTag = document.createElement('p');
   pTag.textContent = '';
   div.appendChild(span);
   div.appendChild(pTag);
   pTag.setAttribute('contenteditable',true);
+  pTag.classList.add('inner-note');
   span.addEventListener('click', handleRemoveNote);
   var noteItems = document.querySelectorAll('.note');
   counterSpan.textContent = " " + noteItems.length;
