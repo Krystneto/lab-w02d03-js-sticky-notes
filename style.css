@@ -25,10 +25,11 @@ button {
 
 .remove {
   margin: 10px;
+  font-size: 20px;
 }
 
 .remove:hover {
-  font-size: 30px;
+  font-size: 25px;
   color: rgb(255,100,100);
 }
 /*CSS styling goes here*/
